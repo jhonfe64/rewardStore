@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from 'react'
+import React, { useRef, useEffect, useContext } from 'react'
 import TopJumbo from '../elements/TopJumbo';
 import { JumboHeightContext } from '../context/jumboContext';
 
