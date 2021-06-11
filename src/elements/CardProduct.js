@@ -6,6 +6,12 @@ const CardProduct = styled.div`
         width: 30%;
         border: 1px solid #ecf0f1;
         padding: 10px;
+
+        &:hover h4.buy {
+            background: white;
+            color: rgb(10,212,250);
+            transition: .3s;
+        }   
     }
 
     & div.cardContainer:hover {
@@ -28,6 +34,19 @@ const CardProduct = styled.div`
         }
     }
 
+    & h4.buy {
+        z-index: 1000;
+        background-color: rgb(10,212,250);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 100%;
+        right: 0;
+    }
+
     & .description h4 {
         color: #95a5a6;
     }
@@ -44,6 +63,11 @@ const CardProduct = styled.div`
         & h3 {
             color: #ffffff;
             text-align: center;
+
+            & svg {
+                color: #F7AE15
+;
+            }
         }
 
         & button {
@@ -57,6 +81,7 @@ const CardProduct = styled.div`
         &:hover {
             opacity: 1;
         }
+
     }
 `
 

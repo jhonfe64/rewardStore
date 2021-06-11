@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import 'bootstrap-4-grid/css/grid.min.css';
+import {SuccessModalContextProvider}  from './context/successModalCotext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SuccessModalContextProvider>
+      <App />
+    </SuccessModalContextProvider>  
   </React.StrictMode>,
   document.getElementById('root')
 );

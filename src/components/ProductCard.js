@@ -3,32 +3,37 @@ import CardProduct from '../elements/CardProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import {CoinsContext} from '../context/actualCoinsContext';
-{/* <i class="fab fa-bitcoin"></i> */}
-
-
+import {SuccessModalContext} from '../context/successModalCotext';
 
 function ProductCard({products}) {
     
     const {coinsFigure, updateCoinsFigure} = useContext(CoinsContext);
+    const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
+   
 
-    // const newFigure = (e) => {
-    //     console.log(e.target.getAttribute('figure'))
-    // }
+    const actualFigure = (e) => {
+        updateCoinsFigure(e.target.getAttribute('actualcoins'));
+        if(coinsFigure > 0){
+            updateSuccessmodal(true);
+        }
+    }
+    
 
+    //console.log('estado del modal desde productCard', successModalStatus)
 
     return (
         <CardProduct className='d-flex flex-wrap justify-content-between w-100'>
             {
                 products.map((product)=>{
                     return (
-                    <div  key={product.name} className='cardContainer mb-5 position-relative pt-3 pl-3'>
+                    <div  key={product.name} className='cardContainer mb-5 position-relative pt-3 pr-3'>
                         {
                              coinsFigure < product.cost ? 
                              <h4 className="position-absolute noBuy">
                                  te faltan {product.cost - coinsFigure}
                                 <FontAwesomeIcon className="ml-3" icon={faCoins} />
                             </h4>: 
-                            <h4 className="position-absolute buy"><FontAwesomeIcon className="ml-3" icon={faShoppingBag} />{product.cost}</h4>
+                            <h4 className="position-absolute buy d-flex mr-3"><FontAwesomeIcon icon={faShoppingBag} /></h4>
                         }
                        
                         <div className="imgContainer">
@@ -43,15 +48,16 @@ function ProductCard({products}) {
                             <div className="position-absolute hoverPrice d-flex justify-content-center align-items-center">
                             <div>
                                 <h3 className="pb-2">{product.cost} <FontAwesomeIcon className="ml-3" icon={faCoins} /></h3>
-                                <button>Redeem now</button>
+                                <button onClick={actualFigure} actualcoins={coinsFigure - product.cost}>Redeem now</button>
                             </div>
                         </div>
                         }
-                        
+                       
                     </div>
                     )
                 })
             }
+         
         </CardProduct>
     )
 }
