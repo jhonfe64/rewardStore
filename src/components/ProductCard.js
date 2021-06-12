@@ -44,15 +44,21 @@ function ProductCard({products}) {
                             <h5 className='text-center pb-4'>{product.category}</h5>
                         </div>
                         {
-                            product.cost - coinsFigure < 0 &&
+                            product.cost - coinsFigure < 0 ?
                             <div className="position-absolute hoverPrice d-flex justify-content-center align-items-center">
-                            <div>
-                                <h3 className="pb-2">{product.cost} <FontAwesomeIcon className="ml-3" icon={faCoins} /></h3>
-                                <button onClick={actualFigure} actualcoins={coinsFigure - product.cost}>Redeem now</button>
+                                <div>
+                                    <h3 className="pb-2">{product.cost} <FontAwesomeIcon className="ml-3" icon={faCoins} /></h3>
+                                    <button onClick={actualFigure} actualcoins={coinsFigure - product.cost}>Redeem now</button>
+                                </div>
+                            </div>:
+                            <div className="position-absolute hoverPrice rechargeCoins d-flex justify-content-center align-items-center">
+                                <div>
+                                    <h3 className="mb-2">No tienes suficiente dinero</h3>
+                                    <h3 className="mb-3">Te faltan {product.cost - coinsFigure} <FontAwesomeIcon className="ml-3" icon={faCoins} /></h3>
+                                    <button onClick={actualFigure} actualcoins={coinsFigure - product.cost}>Obtén mas coins</button>
+                                </div>
                             </div>
-                        </div>
                         }
-                       
                     </div>
                     )
                 })

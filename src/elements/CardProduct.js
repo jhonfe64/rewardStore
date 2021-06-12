@@ -11,7 +11,15 @@ const CardProduct = styled.div`
             background: white;
             color: rgb(10,212,250);
             transition: .3s;
-        }   
+        }
+        
+        @media only screen and (max-width: 800px){
+            width: 48%;
+        }
+
+        @media only screen and (max-width: 550px){
+            width: 100%;
+        }
     }
 
     & div.cardContainer:hover {
@@ -65,8 +73,7 @@ const CardProduct = styled.div`
             text-align: center;
 
             & svg {
-                color: #F7AE15
-;
+                color: #F7AE15;
             }
         }
 
@@ -81,7 +88,10 @@ const CardProduct = styled.div`
         &:hover {
             opacity: 1;
         }
+    }
 
+    & .rechargeCoins {
+        background-color: rgba(255, 0, 6, .6);
     }
 `
 

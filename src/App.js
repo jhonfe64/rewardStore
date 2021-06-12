@@ -20,7 +20,7 @@ function App() {
   console.log('succes modal estatus from APP', successModalStatus);
   return (
     <CoinsContextProvider>
-      <div className="App" style={{marginBottom: '100px'}}>
+      <div className={`App ${successModalStatus && 'bodyBackground'}`} style={{marginBottom: '100px'}}>
         <JumboHeightContextProvider>
           <Header />
           <Jumbo />
