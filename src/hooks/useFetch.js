@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react';
 
-const useFetch = (url, headers) => {
+const useFetch = (url, headers, item) => {
 
     const [data, setData] = useState([]);
 
    useEffect(()=>{
-        const getData = async (url, headers) => {
+        const getData = async (url, headers, item) => {    
             try {
                 const info = await fetch(url, {
                     headers
@@ -21,8 +21,8 @@ const useFetch = (url, headers) => {
                 console.log(e.name + " " + e.message);
             }
         }
-        getData(url, headers);
-   },[url, headers])
+        getData(url, headers, item);
+   },[url, headers, item])
    return [data]
 }
 

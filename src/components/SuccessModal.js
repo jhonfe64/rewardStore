@@ -8,7 +8,7 @@ import Modal from '../elements/Modals';
 function SuccessModal() {
     const {coinsFigure} = useContext(CoinsContext);
     //updating modal context
-    const {updateSuccessmodal} = useContext(SuccessModalContext);
+    const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
 
     const hideModal = () => {
         updateSuccessmodal(false);

@@ -3,34 +3,48 @@ import './App.css';
 import Header from './components/Header';
 import Jumbo from './components/Jumbo';
 import Results from './components/Results';
+import Recharge from './components/Recharge';
 import Filters from './components/Filters';
 import {JumboHeightContextProvider} from './context/jumboContext';
 import {CoinsContextProvider} from './context/actualCoinsContext';
 import {SuccessModalContext} from './context/successModalCotext';
 import SuccessModal from './components/SuccessModal';
 
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// }from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+}from 'react-router-dom'
 
 function App() {
   const {successModalStatus} = useContext(SuccessModalContext);
-  console.log('succes modal estatus from APP', successModalStatus);
   return (
     <CoinsContextProvider>
-      <div className={`App ${successModalStatus && 'bodyBackground'}`} style={{marginBottom: '100px'}}>
-        <JumboHeightContextProvider>
+    <JumboHeightContextProvider>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <div className={`App ${successModalStatus && 'bodyBackground'}`} style={{marginBottom: '100px'}}>
+              <Header />
+              <Jumbo />
+              <Filters />
+              <Results />
+            {
+              successModalStatus && <SuccessModal />
+            }
+          </div>
+      </Route>
+      <Route path="/get-coins" exact>
           <Header />
-          <Jumbo />
-          <Filters />
-        </JumboHeightContextProvider>
-        <Results />
-        {
-          successModalStatus && <SuccessModal />
-        }
-      </div>
+          <Recharge />
+      </Route>
+      <Route path="/record" exact>
+          <Header />
+          <Results />
+      </Route>
+      </Switch>
+    </Router>
+    </JumboHeightContextProvider>
     </CoinsContextProvider>
     
   );

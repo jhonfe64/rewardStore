@@ -4,12 +4,21 @@ import './index.css';
 import App from './App';
 import 'bootstrap-4-grid/css/grid.min.css';
 import {SuccessModalContextProvider}  from './context/successModalCotext';
+import {ProductIdContextProvider} from './context/productid';
+import {IndexProductsContextProvider} from './context/indexProductsContext';
+import {FiltersContextProvider} from './context/filters';
 
 ReactDOM.render(
   <React.StrictMode>
+    <FiltersContextProvider>
+    <IndexProductsContextProvider>
     <SuccessModalContextProvider>
-      <App />
-    </SuccessModalContextProvider>  
+      <ProductIdContextProvider>
+        <App />
+      </ProductIdContextProvider>
+    </SuccessModalContextProvider>
+    </IndexProductsContextProvider>
+    </FiltersContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

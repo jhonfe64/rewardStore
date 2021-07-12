@@ -3,12 +3,15 @@ import styled from 'styled-components';
 
 const MainHeader= styled.div`
 
+
+
 &.fixed {
    position: fixed;
    left: 0;
    right: 0;
    background-color: #ffffff;
    z-index: 10000;
+   top: 0;
    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
 }
 

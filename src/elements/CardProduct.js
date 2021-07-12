@@ -37,6 +37,7 @@ const CardProduct = styled.div`
         color: #ffffff;
         padding: 5px 20px;
         border-radius: 10px;
+        z-index: 1000;
         & svg {
             color: #f39c12;
         }
@@ -80,9 +81,10 @@ const CardProduct = styled.div`
         & button {
             background-color: #ffffff;
             border: none;
-            padding: 10px 40px;
+            padding: 10px 50px !important;
             border-radius: 20px;
             font-size: 1.2rem;
+            cursor: pointer;
         }
 
         &:hover {
@@ -91,7 +93,14 @@ const CardProduct = styled.div`
     }
 
     & .rechargeCoins {
-        background-color: rgba(255, 0, 6, .6);
+        background-color: rgba(255,0,0,0.6);
+        & a {
+            background-color: white;
+            color: #000000;
+            font-weight: 900;
+            border-radius: 20px;
+            font-size: 1.2rem;
+        }
     }
 `
 

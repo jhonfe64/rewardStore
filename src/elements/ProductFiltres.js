@@ -24,5 +24,18 @@ const ProductFiltres = styled.div`
     & select, .filterPrice :focus {
         outline: none;
     }
+
+    & a {
+        background-color: #0d6efd;
+        color: #ffffff;
+        border-radius: 5px;
+    }
+
+    & button {
+        background-color: #ecf0f1;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 `
 export default ProductFiltres;

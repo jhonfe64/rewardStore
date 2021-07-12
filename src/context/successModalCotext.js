@@ -3,7 +3,7 @@ import {useState, createContext} from 'react';
 const SuccessModalContext = createContext();
 
 function SuccessModalContextProvider({children}){
-    const [successModalStatus, setSuccessModalStatus] = useState(false);
+    const [successModalStatus, setSuccessModalStatus] = useState(null);
 
     //update the state
 

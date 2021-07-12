@@ -1,25 +1,44 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import CardProduct from '../elements/CardProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import {CoinsContext} from '../context/actualCoinsContext';
+import {ProductIdContext} from '../context/productid'
 import {SuccessModalContext} from '../context/successModalCotext';
+import {Link} from 'react-router-dom';
 
 function ProductCard({products}) {
     
-    const {coinsFigure, updateCoinsFigure} = useContext(CoinsContext);
+    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext);
     const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
-   
+    const [productPrice, setProductPrice] = useState(0);
 
-    const actualFigure = (e) => {
-        updateCoinsFigure(e.target.getAttribute('actualcoins'));
+    const {productId, updateProductId}  = useContext(ProductIdContext);
+
+   
+    const setProductCost = (e) => {
+        setProductPrice(e.target.getAttribute('productcost'));
         if(coinsFigure > 0){
             updateSuccessmodal(true);
         }
     }
-    
 
-    //console.log('estado del modal desde productCard', successModalStatus)
+    //TOCA HACER LA PETICION PARA ENVIAR EL PRODUCTO POR POST A LA API , DESPUES HACER LA PETICION EN FILTERS
+    //AHORA EN LA PAGINA DEL HISTORIAL, PARA VER LOS PRODUCTOS LE HACEMOS UN USEeFFECT Y QUE HAGA LA PETICON
+    //CUANDO CARGUE LA PAGINA Y MUESTRA LOS PRODUCTOS
+    
+    const setProductId = (e) => {
+        updateProductId(e.target.getAttribute('productid'));
+    }
+
+    localStorage.setItem('actualCoinsFigure', coinsFigure);
+
+    useEffect(()=>{
+        if(coinsFigure > 0 && productPrice > 0 && successModalStatus === true){
+            updateCoinsFigure(coinsFigure - Number(productPrice));
+        }
+    },[successModalStatus]);
+  
 
     return (
         <CardProduct className='d-flex flex-wrap justify-content-between w-100'>
@@ -48,14 +67,13 @@ function ProductCard({products}) {
                             <div className="position-absolute hoverPrice d-flex justify-content-center align-items-center">
                                 <div>
                                     <h3 className="pb-2">{product.cost} <FontAwesomeIcon className="ml-3" icon={faCoins} /></h3>
-                                    <button onClick={actualFigure} actualcoins={coinsFigure - product.cost}>Redeem now</button>
+                                    <button className="p-2 w-100" onClick={(e)=> {setProductCost(e); setProductId(e)}} productcost={product.cost} productid = {product._id}>Redeem now</button>
                                 </div>
                             </div>:
                             <div className="position-absolute hoverPrice rechargeCoins d-flex justify-content-center align-items-center">
                                 <div>
-                                    <h3 className="mb-2">No tienes suficiente dinero</h3>
-                                    <h3 className="mb-3">Te faltan {product.cost - coinsFigure} <FontAwesomeIcon className="ml-3" icon={faCoins} /></h3>
-                                    <button onClick={actualFigure} actualcoins={coinsFigure - product.cost}>Obtén mas coins</button>
+                                    <h3 className="mb-3">No tienes suficiente dinero</h3>
+                                    <Link className="nav-link active  w-100 d-block p-2 text-center" target="_blank" to="/get-coins">Obtener mas coins</Link>
                                 </div>
                             </div>
                         }
