@@ -1,8 +1,10 @@
 import { useContext, useState, useEffect } from 'react';
+import ResultsComponent from '../elements/ResultsStyles'
 import {headers,  allProductsUrl} from '../keys';
 import ProductCard from './ProductCard';
 import Loader from './Loader';
 //Import personalized hook
+
 import useFetch from '../hooks/useFetch';
 import {ProductIdContext} from '../context/productid';
 import  useFetchPost from '../hooks/useFetchPost';
@@ -11,7 +13,9 @@ import {getReedemproducts} from '../keys';
 import { useLocation } from 'react-router';
 import RedeemProductCard from './RedeemProductCard';
 import {IndexProductsContext} from '../context/indexProductsContext';
-import {FiltersContext, FiltersContextProvider} from '../context/filters';
+import {FiltersContext} from '../context/filters';
+//Pginacións
+import usePagination from "../hooks/usePagination";
 
 const Results = () => {
 
@@ -26,9 +30,33 @@ const Results = () => {
     const {indexProducts, updateIndexProducts} = useContext(IndexProductsContext);
 
     //Context de filtros
-    const {filtersValues, updateCategory, updatePrice} = useContext(FiltersContext);
+    const {filtersValues} = useContext(FiltersContext);
 
-    const [filteredList, setFilteredList] = useState([])
+    const [filteredList, setFilteredList] = useState([]);
+
+    //Paginación
+    let [page, setPage] = useState(1);
+    const PER_PAGE = 16;
+
+    const handleChange = (e) => {
+        if(e.target.getAttribute('name') === 'next'){
+            setPage(2);
+            _DATA.jump(2);
+        }
+
+        if(e.target.getAttribute('name') === 'back'){
+            setPage(1);
+            _DATA.jump(1);
+        }
+    }
+
+
+    
+  const count = Math.ceil(filteredList.length / PER_PAGE);
+  const _DATA = usePagination(filteredList, PER_PAGE);
+
+  const filteredlistPaginated = _DATA.currentData();
+
 
     useEffect(()=>{
         const filteredProducts = indexProducts.filter((product)=>{
@@ -50,7 +78,6 @@ const Results = () => {
     },[indexProducts])
 
     //updateCategory, updatePrice
-
     if(filteredList && filtersValues.price === 'max'){
         filteredList.sort(function (a, b) {
             return b.cost - a.cost;
@@ -63,9 +90,6 @@ const Results = () => {
         });
     }
 
-    console.log('FILTERED LIST =======================> ', filteredList)
-
-
     if(data){
         updateIndexProducts(data)
     }
@@ -77,27 +101,36 @@ const Results = () => {
     //Enviando los productos redimidos
     useFetchPost(setReedemproducts, headers, body,  productId);
 
-
-
     console.log('productos del index  =====> ', indexProducts)
  
     //Trayendo los productos cangeados
     const getReedemProducts = useFetch(getReedemproducts, headers, productId);
 
     return (
-        <div className=''>
+        <ResultsComponent>
             <div className="container d-flex mt-5">
                 {
                     url === '/record' && getReedemProducts.length > 0 && <RedeemProductCard products={getReedemProducts} />
                 }
                 {
-                    url === '/' && data.length > 0 && <ProductCard products={filteredList} />
+                    url === '/' && data.length > 0 && <ProductCard products={filteredlistPaginated} />
                 }
                 {
                     getReedemProducts.length <= 0 || data.length <= 0 && <Loader />
                 }
             </div>
-        </div>
+            {
+                filteredlistPaginated.length >= 16 && 
+                <div className="container d-flex justify-content-center">
+                <button className="p-2" name="back" onClick={handleChange}>
+                    1
+                </button>
+                <button className="ml-2 p-2" name="next" onClick={handleChange}>
+                    2
+                </button>
+            </div>
+            }
+        </ResultsComponent>
     );
 }
 
