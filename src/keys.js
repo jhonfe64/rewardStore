@@ -8,9 +8,13 @@ const getReedemproducts = 'https://coding-challenge-api.aerolab.co/user/history'
 
 const headers = {
     Accept : 'application/json',
-    Authorization : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFmZDhmYzliNzc4MTAwMjA5YzVhYTgiLCJpYXQiOjE2MjIxMzcwODR9.mpjkoeSAOeuY18cVP6T0XFLZpaXs8GbO5XWzFIg9N-A',
+    Authorization : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGVlMDNiODY3Mjk2ZTAwMTk5NjQxM2IiLCJpYXQiOjE2MjYyMTEyNTZ9.OzGeRBOP0AnB8kXaVO20X79DFEkO65SEia_3yxmKkU8',
     'Content-Type': 'application/json'
 }
+
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFmZDhmYzliNzc4MTAwMjA5YzVhYTgiLCJpYXQiOjE2MjIxMzcwODR9.mpjkoeSAOeuY18cVP6T0XFLZpaXs8GbO5XWzFIg9N-A
+
+
 
 export  {headers, allProductsUrl, userUrl, updateCoinsFigureUrl, setReedemproducts, getReedemproducts};
 
