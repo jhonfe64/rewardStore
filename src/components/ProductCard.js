@@ -67,13 +67,13 @@ function ProductCard({products}) {
                             <div className="position-absolute hoverPrice d-flex justify-content-center align-items-center">
                                 <div>
                                     <h3 className="pb-2">{product.cost} <FontAwesomeIcon className="ml-3" icon={faCoins} /></h3>
-                                    <button className="p-2 w-100" onClick={(e)=> {setProductCost(e); setProductId(e)}} productcost={product.cost} productid = {product._id}>Redeem now</button>
+                                    <button className="p-2 w-100" onClick={(e)=> {setProductCost(e); setProductId(e)}} productcost={product.cost} productid = {product._id}>Redimir ahora</button>
                                 </div>
                             </div>:
                             <div className="position-absolute hoverPrice rechargeCoins d-flex justify-content-center align-items-center">
                                 <div>
                                     <h3 className="mb-3">No tienes suficiente dinero</h3>
-                                    <Link className="nav-link active  w-100 d-block p-2 text-center" target="_blank" to="/get-coins">Obtener mas coins</Link>
+                                    <Link className="nav-link active  w-100 d-block p-2 text-center" target="_blank" to="/get-coins">Obtener mas monedas</Link>
                                 </div>
                             </div>
                         }

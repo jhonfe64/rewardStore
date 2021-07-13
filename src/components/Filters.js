@@ -32,7 +32,7 @@ function Filters() {
     return (
         <ProductFiltres className={`container mt-4 mb-4 mt-md-5 ${jumboHeight === true && 'marginTop'}`}>
             <div className="row d-flex">
-                <div className="col-12 d-flex">
+                <div className="col-12 d-flex flex-wrap">
                     <select className='mr-3' name="categoriesSelect" id="" onChange={handleSelectValue} value={filtersValues.category}>
                         <option value="" key="" selected disabled>Seleccionar categoria</option>
                         <option name="phones" value="Phones">Phones</option>
@@ -41,7 +41,7 @@ function Filters() {
                         <option name="cameras" value="Cameras">Cameras</option>
                         <option name="monitorsAndTv" value="Monitors & TV">Monitors and TV</option>
                         <option name="drones" value="Drones">Drones</option>
-                        <option name="phonesAccessories" value="Phones Accessories">Phones Accessories</option>
+                        <option name="phonesAccessories" value="Phone Accessories">Phones Accessories</option>
                         <option name="startHome" value="Smart Home">Smart Home</option>
                         <option name="pcAccessories" value="PC Accessories">PC Accessories</option>
                         <option name="tabletsAndErenders" value="Tablets & E-readers">Tablets & E-readers</option>
@@ -51,7 +51,7 @@ function Filters() {
                         <option name="max" value="max">Precio máximo</option>
                         <option name="min" value="min">Precio mínimo</option>
                     </select>
-                    <Link to='/record' target="_blank" className="d-flex align-items-center pr-3 pl-3">Ver historial</Link>
+                    <Link to='/record' target="_blank" className="text-center d-flex align-items-center pr-3 pl-3">Ver historial</Link>
                     <button onClick={resetFilters} className="ml-3 rounded pr-3 pl-3 border-0">Reset filtros</button>
                 </div>
             </div>

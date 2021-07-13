@@ -37,5 +37,16 @@ const ProductFiltres = styled.div`
         border-radius: 5px;
         cursor: pointer;
     }
+
+    @media only screen and (max-width: 782px){
+        & select, .filterPrice, a, button {
+            width: 100%;
+            margin: 0 !important;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-bottom: 10px !important;
+            text-align: center;
+        }
+    }
 `
 export default ProductFiltres;
