@@ -90,8 +90,6 @@ const Results = () => {
     //Trayendo los productos cangeados
     const getReedemProducts = useFetch(getReedemproducts, headers, productId);
 
-    console.log('===========> ', filteredList)
-
       //updateCategory, updatePrice
       if(filteredList && filtersValues.price === 'max' && filtersValues.price !== ''){
         filteredList.sort(function (a, b) {
