@@ -78,13 +78,13 @@ const Results = () => {
     },[indexProducts])
 
     //updateCategory, updatePrice
-    if(filteredList && filtersValues.price === 'max'){
+    if(filteredList && filtersValues.price === 'max' && filtersValues !== ''){
         filteredList.sort(function (a, b) {
             return b.cost - a.cost;
         });
     }
 
-    if(filteredList && filtersValues.price === 'min'){
+    if(filteredList && filtersValues.price === 'min' && filtersValues.price !== ''){
         filteredList.sort(function (a, b) {
             return a.cost - b.cost;
         });
