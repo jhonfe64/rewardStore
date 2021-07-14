@@ -57,7 +57,6 @@ const Results = () => {
 
   const filteredlistPaginated = _DATA.currentData();
 
-
     useEffect(()=>{
         const filteredProducts = indexProducts.filter((product)=>{
             if(product.category !== ''){
@@ -67,7 +66,7 @@ const Results = () => {
             }
         })
 
-        if(filteredProducts){
+        if(filteredProducts.length >= 0){
             setFilteredList(filteredProducts);
         }
     },[filtersValues.category, indexProducts])
@@ -78,7 +77,7 @@ const Results = () => {
     },[indexProducts])
 
     //updateCategory, updatePrice
-    if(filteredList && filtersValues.price === 'max' && filtersValues !== ''){
+    if(filteredList && filtersValues.price === 'max' && filtersValues.price !== ''){
         filteredList.sort(function (a, b) {
             return b.cost - a.cost;
         });

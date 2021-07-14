@@ -17,7 +17,7 @@ const useFetchPost = (url, headers, body, rechargedFigure) => {
                 console.log(err);
             })
         }
-    }, [rechargedFigure]);
+    }, [rechargedFigure, body, headers, url]);
     return [data];
 }
 
