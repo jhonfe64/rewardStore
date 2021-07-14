@@ -76,19 +76,6 @@ const Results = () => {
         setFilteredList(indexProducts);
     },[indexProducts])
 
-    //updateCategory, updatePrice
-    if(filteredList && filtersValues.price === 'max' && filtersValues.price !== ''){
-        filteredList.sort(function (a, b) {
-            return b.cost - a.cost;
-        });
-    }
-
-    if(filteredList && filtersValues.price === 'min' && filtersValues.price !== ''){
-        filteredList.sort(function (a, b) {
-            return a.cost - b.cost;
-        });
-    }
-
     if(data){
         updateIndexProducts(data)
     }
@@ -104,6 +91,19 @@ const Results = () => {
     const getReedemProducts = useFetch(getReedemproducts, headers, productId);
 
     console.log('===========> ', filteredList)
+
+      //updateCategory, updatePrice
+      if(filteredList && filtersValues.price === 'max' && filtersValues.price !== ''){
+        filteredList.sort(function (a, b) {
+            return b.cost - a.cost;
+        });
+    }
+
+    if(filteredList && filtersValues.price === 'min' && filtersValues.price !== ''){
+        filteredList.sort(function (a, b) {
+            return a.cost - b.cost;
+        });
+    }
 
     return (
         <ResultsComponent>
