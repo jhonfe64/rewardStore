@@ -103,6 +103,8 @@ const Results = () => {
     //Trayendo los productos cangeados
     const getReedemProducts = useFetch(getReedemproducts, headers, productId);
 
+    console.log('===========> ', filteredList)
+
     return (
         <ResultsComponent>
             <div className="container d-flex mt-5">
