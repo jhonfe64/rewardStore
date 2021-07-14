@@ -118,15 +118,15 @@ const Results = () => {
                 }
             </div>
             {
-                filteredlistPaginated.length >= 16 && 
+                filteredlistPaginated.length >= 16 &&
                 <div className="container d-flex justify-content-center">
-                <button className="p-2" name="back" onClick={handleChange}>
-                    1
-                </button>
-                <button className="ml-2 p-2" name="next" onClick={handleChange}>
-                    2
-                </button>
-            </div>
+                    <button className="p-2" name="back" onClick={handleChange}>
+                        1
+                    </button>
+                    <button className="ml-2 p-2" name="next" onClick={handleChange}>
+                        2
+                    </button>
+                </div>
             }
         </ResultsComponent>
     );
