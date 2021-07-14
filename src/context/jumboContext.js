@@ -11,8 +11,6 @@ function JumboHeightContextProvider({children}) {
         setJumboHeight(jumboHeight);
     }
 
-    console.log('vaLor actual', jumboHeight)
-
     return (
         <JumboHeightContext.Provider value={{jumboHeight, updateJumboheight}}>
             {children}

@@ -28,9 +28,6 @@ function Header() {
     //peticion fetch (la url trae la info del usuario)
     let [data] = useFetch(userUrl, headers);
 
-    console.log('DATOS ACTUALIZADOS DE LOS PUNTOS', data.points)
-    
-
     //updateCoinsFigure(data.points);
 
     const actualCoins = Number(localStorage.getItem('actualCoinsFigure'));

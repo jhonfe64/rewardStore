@@ -10,8 +10,6 @@ function CoinsContextProvider({children}){
         setCoinsFigure(coinsFigure);
     }
 
-    console.log('coins figure updated', coinsFigure);
-
     return (
         <CoinsContext.Provider value={{coinsFigure, updateCoinsFigure}}>
             {children}

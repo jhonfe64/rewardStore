@@ -23,15 +23,13 @@ function Jumbo() {
             }
         });
     },[updateJumboheight])
-    
- 
 
     return (
         <TopJumbo className='container-fluid' ref={RefJumbo}>
             <div>
                 <div className="row d-flex">
                     <div className='headPhones pr-0 col-6 d-none d-lg-block'>
-                        <img className='w-100 h-100' src="./img/headphones.jpg" alt="" />
+                        <img className='w-100 h-100' src="./img/headPhones.jpg" alt="headphones" />
                     </div>
                     <div className='d-flex flex-wrap col-12 col-lg-6 '>
                         <div className='w-100 name  d-flex flex-wrap align-items-center'>

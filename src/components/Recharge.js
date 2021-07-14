@@ -31,15 +31,10 @@ function Recharge() {
 
     //los coins del locals torage
     const actualCoinsFigure =  Number(localStorage.getItem('actualCoinsFigure'));
-    console.log('actual coinsFigure');
-    
 
     useEffect(()=>{
         localStorage.setItem('actualCoinsFigure', actualCoinsFigure + Number(newCoins));
     },[body])
-
-
-    console.log('lo que hay guardado en el local storage', actualCoinsFigure + Number(newCoins));
 
     //actualizar el localstorare
     //actualizar ele stado global

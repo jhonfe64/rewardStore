@@ -23,11 +23,8 @@ function Filters() {
     }
 
     const resetFilters = () => {
-        console.log('SE RESETEARON LOS FILTROS')
         window.location.reload();
     }
-
-    console.log('YYYYYYYYYYYYYYTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTIIIIIIIIIIIYYYYYYYY', filtersValues)
 
     return (
         <ProductFiltres className={`container mt-4 mb-4 mt-md-5 ${jumboHeight === true && 'marginTop'}`}>

@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 import '../App.css'
 
 function RedeemProductCard({products}) {
-    console.log(products)
     return (
         <>
         <div className='d-flex flex-wrap justify-content-between col-12 p-0 mt-5'>

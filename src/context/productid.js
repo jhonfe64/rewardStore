@@ -10,8 +10,6 @@ function ProductIdContextProvider({children}){
         setproductId(productId);
     }
 
-    console.log('id del producto a actualizar DDDDDDDDDDDDDD', productId);
-
     return (
         <ProductIdContext.Provider value={{productId, updateProductId}}>
             {children}

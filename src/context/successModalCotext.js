@@ -11,8 +11,6 @@ function SuccessModalContextProvider({children}){
         setSuccessModalStatus(successModalStatus)
     }
 
-    console.log('estado del modal', successModalStatus)
-
     return (
         <SuccessModalContext.Provider value={{successModalStatus, updateSuccessmodal}}>
             {children}

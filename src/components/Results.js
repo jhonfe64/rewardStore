@@ -100,8 +100,6 @@ const Results = () => {
 
     //Enviando los productos redimidos
     useFetchPost(setReedemproducts, headers, body,  productId);
-
-    console.log('productos del index  =====> ', indexProducts)
  
     //Trayendo los productos cangeados
     const getReedemProducts = useFetch(getReedemproducts, headers, productId);

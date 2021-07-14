@@ -24,9 +24,6 @@ function FiltersContextProvider({children}){
             price: price
         })
     }
-   
- 
-    console.log('valores de los filtros ========================> ', filtersValues);
 
     return (
         <FiltersContext.Provider value={{filtersValues, updateCategory, updatePrice}}>

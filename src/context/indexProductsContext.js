@@ -9,8 +9,6 @@ function IndexProductsContextProvider({children}){
         setIndexProducts(indexProducts);
     }
 
-    console.log('PRODUCTOS DEL INDEX', indexProducts);
-
     return (
         <IndexProductsContext.Provider value={{indexProducts, updateIndexProducts}}>
             {children}
