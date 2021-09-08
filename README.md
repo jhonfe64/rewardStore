@@ -1,7 +1,7 @@
 
 # Reward store
 
-This web application built in react.js allows users to exchage coins for products, users can recharge coins and filters products by category and price, includes a pagination.
+This web application built in react.js allows users to exchage coins for products, users can recharge coins and filter products by category and price, includes a pagination.
 
 ### Includes the following node packages
 
