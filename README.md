@@ -5,7 +5,7 @@ This web application built in react.js allows users to exchage coins for product
 
 ### Includes the following node packages
 
-styled components
+styled components,
 react router
 
 
