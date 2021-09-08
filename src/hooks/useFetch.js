@@ -5,7 +5,8 @@ const useFetch = (url, headers, item) => {
     const [data, setData] = useState([]);
 
    useEffect(()=>{
-        const getData = async (url, headers, item) => {    
+        const getData = async (url, headers, item) => {
+            console.log(url);    
             try {
                 const info = await fetch(url, {
                     headers

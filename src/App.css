@@ -2,6 +2,10 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .bodyBackground::after {
     content: '';
     position: fixed;
