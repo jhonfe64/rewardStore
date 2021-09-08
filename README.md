@@ -1,5 +1,5 @@
 
-# Hotels app
+# Reward store
 
 This web application built in react.js allows users to exchage coins for products, users can recharge coins and filters products by category and price, includes a pagination.
 
@@ -13,7 +13,7 @@ react router
 
 on vsc console type: 
 
-- git clone https://github.com/jhonfe64/HotelsApp.git
+- git clone https://github.com/jhonfe64/rewardStore.git
 - Use npm i to install all dependences 
 
 
@@ -21,12 +21,10 @@ on vsc console type:
 
 type on vsc console => npm start
 
-## check in codesandbox https://codesandbox.io/s/github/jhonfe64/HotelsApp
-## check the app deployed in vercel https://hotelsapp-beige.vercel.app
+## check the app deployed in vercel https://reward-store.vercel.app
 
 
 
-
-![](https://github.com/jhonfe64/HotelsApp/blob/master/hotel1.jpg?raw=true)
+![](https://github.com/jhonfe64/rewardStore/blob/master/reward.png?raw=true)
 ###
-![](https://github.com/jhonfe64/HotelsApp/blob/master/hotel2.jpg?raw=true)
+![](https://github.com/jhonfe64/rewardStore/blob/master/reward.png?raw=true)
