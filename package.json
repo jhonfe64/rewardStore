@@ -2,7 +2,7 @@
   "name": "reward-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "jhonfe64.github.io/rewardStore",
+  "homepage": "https://jhonfe64.github.io/rewardStore",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
