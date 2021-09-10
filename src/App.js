@@ -23,7 +23,7 @@ function App() {
     <JumboHeightContextProvider>
     <Router>
       <Switch>
-        <Route path="/" exact>
+        <Route path="/rewardStore" exact>
           <div className={`App ${successModalStatus && 'bodyBackground'}`} style={{marginBottom: '100px'}}>
               <Header />
               <Jumbo />
