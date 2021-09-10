@@ -11,7 +11,7 @@ import {SuccessModalContext} from './context/successModalCotext';
 import SuccessModal from './components/SuccessModal';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 }from 'react-router-dom'
