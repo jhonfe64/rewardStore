@@ -6,7 +6,6 @@ const useFetchPost = (url, headers, body, rechargedFigure) => {
         if(rechargedFigure !== 0){
             fetch(url, {
                 method: 'POST',
-                mode: 'cors',
                 headers: headers,
                 body: body
             })

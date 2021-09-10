@@ -1,8 +1,8 @@
 
 const userUrl = 'https://coding-challenge-api.aerolab.co/user/me';
 const allProductsUrl = 'https://coding-challenge-api.aerolab.co/products';
-const updateCoinsFigureUrl = 'https://private-anon-6ac56a34c9-aerolabchallenge.apiary-proxy.com/user/points';
-const setReedemproducts = 'https://private-anon-a69557cdcd-aerolabchallenge.apiary-proxy.com/redeem'
+const updateCoinsFigureUrl = 'https://coding-challenge-api.aerolab.co/user/points';
+const setReedemproducts = 'https://coding-challenge-api.aerolab.co/redeem'
 const getReedemproducts = 'https://coding-challenge-api.aerolab.co/user/history';
 
 
