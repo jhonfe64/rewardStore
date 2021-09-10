@@ -21,9 +21,9 @@ function App() {
   return (
     <CoinsContextProvider>
     <JumboHeightContextProvider>
-    <Router>
+    <Router basename="rewardStore">
       <Switch>
-        <Route path="/">
+        <Route path="/" exact>
           <div className={`App ${successModalStatus && 'bodyBackground'}`} style={{marginBottom: '100px'}}>
               <Header />
               <Jumbo />
