@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/jhonfe64.github.io/rewardStore/static/css/main.4cfb8d89.chunk.css",
-    "main.js": "/jhonfe64.github.io/rewardStore/static/js/main.794da4b6.chunk.js",
-    "main.js.map": "/jhonfe64.github.io/rewardStore/static/js/main.794da4b6.chunk.js.map",
-    "runtime-main.js": "/jhonfe64.github.io/rewardStore/static/js/runtime-main.b0172d95.js",
-    "runtime-main.js.map": "/jhonfe64.github.io/rewardStore/static/js/runtime-main.b0172d95.js.map",
-    "static/css/2.5b6522da.chunk.css": "/jhonfe64.github.io/rewardStore/static/css/2.5b6522da.chunk.css",
-    "static/js/2.aa778879.chunk.js": "/jhonfe64.github.io/rewardStore/static/js/2.aa778879.chunk.js",
-    "static/js/2.aa778879.chunk.js.map": "/jhonfe64.github.io/rewardStore/static/js/2.aa778879.chunk.js.map",
-    "index.html": "/jhonfe64.github.io/rewardStore/index.html",
-    "static/css/2.5b6522da.chunk.css.map": "/jhonfe64.github.io/rewardStore/static/css/2.5b6522da.chunk.css.map",
-    "static/css/main.4cfb8d89.chunk.css.map": "/jhonfe64.github.io/rewardStore/static/css/main.4cfb8d89.chunk.css.map",
-    "static/js/2.aa778879.chunk.js.LICENSE.txt": "/jhonfe64.github.io/rewardStore/static/js/2.aa778879.chunk.js.LICENSE.txt"
+    "main.css": "/rewardStore/static/css/main.4cfb8d89.chunk.css",
+    "main.js": "/rewardStore/static/js/main.794da4b6.chunk.js",
+    "main.js.map": "/rewardStore/static/js/main.794da4b6.chunk.js.map",
+    "runtime-main.js": "/rewardStore/static/js/runtime-main.129d67dc.js",
+    "runtime-main.js.map": "/rewardStore/static/js/runtime-main.129d67dc.js.map",
+    "static/css/2.5b6522da.chunk.css": "/rewardStore/static/css/2.5b6522da.chunk.css",
+    "static/js/2.b8148432.chunk.js": "/rewardStore/static/js/2.b8148432.chunk.js",
+    "static/js/2.b8148432.chunk.js.map": "/rewardStore/static/js/2.b8148432.chunk.js.map",
+    "index.html": "/rewardStore/index.html",
+    "static/css/2.5b6522da.chunk.css.map": "/rewardStore/static/css/2.5b6522da.chunk.css.map",
+    "static/css/main.4cfb8d89.chunk.css.map": "/rewardStore/static/css/main.4cfb8d89.chunk.css.map",
+    "static/js/2.b8148432.chunk.js.LICENSE.txt": "/rewardStore/static/js/2.b8148432.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b0172d95.js",
+    "static/js/runtime-main.129d67dc.js",
     "static/css/2.5b6522da.chunk.css",
-    "static/js/2.aa778879.chunk.js",
+    "static/js/2.b8148432.chunk.js",
     "static/css/main.4cfb8d89.chunk.css",
     "static/js/main.794da4b6.chunk.js"
   ]
