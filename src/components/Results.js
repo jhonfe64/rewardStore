@@ -107,10 +107,10 @@ const Results = () => {
         <ResultsComponent>
             <div className="container d-flex mt-5">
                 {
-                    url === '/record' && getReedemProducts.length > 0 && <RedeemProductCard products={getReedemProducts} />
+                    url === '/rewardStore/record' && getReedemProducts.length > 0 && <RedeemProductCard products={getReedemProducts} />
                 }
                 {
-                    url === '/' && data.length > 0 && <ProductCard products={filteredlistPaginated} />
+                    url === '/rewardStore' && data.length > 0 && <ProductCard products={filteredlistPaginated} />
                 }
                 {
                     getReedemProducts.length <= 0 || data.length <= 0 && <Loader />
