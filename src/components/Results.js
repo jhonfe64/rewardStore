@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from 'react';
-import ResultsComponent from '../elements/ResultsStyles'
+import ResultsComponent from '../elements/ResultsStyles';
 import {headers,  allProductsUrl} from '../keys';
 import ProductCard from './ProductCard';
 import Loader from './Loader';
@@ -30,7 +30,7 @@ const Results = () => {
     //productos cangeados
     const {productId}  = useContext(ProductIdContext);
 
-    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext); //TALVEZ SEA ESTO lo que se manda como parametro en result 
+    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext);
 
 
     const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);

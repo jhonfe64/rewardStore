@@ -9,7 +9,7 @@ const getReedemproducts = 'https://coding-challenge-api.aerolab.co/user/history'
 
 const headers = {
     Accept : 'application/json',
-    Authorization : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGVlMDNiODY3Mjk2ZTAwMTk5NjQxM2IiLCJpYXQiOjE2MjYyMTEyNTZ9.OzGeRBOP0AnB8kXaVO20X79DFEkO65SEia_3yxmKkU8',
+    Authorization : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiYTQ2NWM1NGQ5NjAwMWEzYmIxYzEiLCJpYXQiOjE2MzIzNDcyMzd9.B9b3Il_avog21-9bqt2FGkt6nBwYgDSDlKJCB0k5uSg',
     'Content-Type': 'application/json'
 }
 
