@@ -1,4 +1,4 @@
-import React, {useContext, useRef, useState, useEffect } from 'react';
+import React, {useContext, useRef, useEffect } from 'react';
 import  MainHeader from '../elements/MainHeader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';

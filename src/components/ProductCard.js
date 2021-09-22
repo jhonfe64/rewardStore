@@ -13,7 +13,7 @@ function ProductCard({products}) {
     const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
     const [productPrice, setProductPrice] = useState(0);
 
-    const {productId, updateProductId}  = useContext(ProductIdContext);
+    const {updateProductId}  = useContext(ProductIdContext);
 
    
     const setProductCost = (e) => {
