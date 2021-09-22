@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import {FiltersContext} from '../context/filters';
 
-function usePagination(data, itemsPerPage) {
-    const [currentPage, setCurrentPage] = useState(1);
-    const maxPage = Math.ceil(data.length / itemsPerPage);
+function usePagination(data, itemsPerPage, item) {
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+ 
+  const maxPage = Math.ceil(data.length / itemsPerPage);
 
   function currentData() {
     const begin = (currentPage - 1) * itemsPerPage;
     const end = begin + itemsPerPage;
-   return data.slice(begin, end);
+    return data.slice(begin, end);
   }
 
   function next() {
@@ -23,7 +27,8 @@ function usePagination(data, itemsPerPage) {
     setCurrentPage((currentPage) => Math.min(pageNumber, maxPage));
   }
 
-  return { next, prev, jump, currentData, currentPage, maxPage };
+
+  return  { next, prev, jump, currentData, currentPage, maxPage};
  }
 
 export default usePagination;

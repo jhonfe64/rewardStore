@@ -2,14 +2,15 @@ import React, {useContext, useState, useEffect} from 'react';
 import CardProduct from '../elements/CardProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
-import {CoinsContext} from '../context/actualCoinsContext';
+import {CoinsContext} from '../context/actualCoinsContext'; //TAL VEZ SEA ESTO
 import {ProductIdContext} from '../context/productid'
 import {SuccessModalContext} from '../context/successModalCotext';
 import {Link} from 'react-router-dom';
 
 function ProductCard({products}) {
     
-    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext);
+    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext); //TALVEZ SEA ESTO lo que se manda como parametro en result 
+    console.log("ESRTA ES LA PLATA QUE HAY ==============>", coinsFigure);
     const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
     const [productPrice, setProductPrice] = useState(0);
 
@@ -37,7 +38,7 @@ function ProductCard({products}) {
         if(coinsFigure > 0 && productPrice > 0 && successModalStatus === true){
             updateCoinsFigure(coinsFigure - Number(productPrice));
         }
-    },[successModalStatus]);
+    },[successModalStatus, productPrice]);
   
 
     return (

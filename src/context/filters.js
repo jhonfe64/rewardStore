@@ -16,6 +16,7 @@ function FiltersContextProvider({children}){
         });
     }
 
+
     //update filter by price
     
     const updatePrice = (price) => {

@@ -18,7 +18,7 @@ const useFetch = (url, headers, item) => {
                 }
             }
             catch(e){
-                console.log(e.name + " " + e.message);
+                //console.log(e.name + " " + e.message);
             }
         }
         getData(url, headers, item);

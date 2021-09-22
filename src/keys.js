@@ -2,8 +2,9 @@
 const userUrl = 'https://coding-challenge-api.aerolab.co/user/me';
 const allProductsUrl = 'https://coding-challenge-api.aerolab.co/products';
 const updateCoinsFigureUrl = 'https://coding-challenge-api.aerolab.co/user/points';
-const setReedemproducts = 'https://coding-challenge-api.aerolab.co/redeem'
+const setReedemproducts = 'https://coding-challenge-api.aerolab.co/redeem';
 const getReedemproducts = 'https://coding-challenge-api.aerolab.co/user/history';
+
 
 
 const headers = {
