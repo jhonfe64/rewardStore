@@ -15,7 +15,6 @@ function Filters() {
     const handleSelectValue = (e) => {
         if(e.target.name === 'categoriesSelect'){
             updateCategory(e.target.value);
-            console.log(e.target.value);
         }
     }
 

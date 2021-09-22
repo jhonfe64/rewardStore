@@ -11,8 +11,9 @@ function RedeemProductCard({products}) {
         <h1 className="w-100 mt-5 mb-5">Productos redimidos</h1>
          {
              products[0].map((product)=>{
+                const number = Math.floor((Math.random()*1000000)+1);             
                 return(
-                  <RedeemProductCar className="mb-4 pb-4">
+                  <RedeemProductCar  key={number} className="mb-4 pb-4">
                       <div className="w-100">
                         <img className="w-100" src={product.img.url} alt={product.name} />
                       </div>

@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 
 const useFetchPost = (url, headers, body, rechargedFigure) => {
-    console.log(url);
     const [data, setData] = useState();
     useEffect(()=>{
         fetch(url, {
@@ -14,7 +13,7 @@ const useFetchPost = (url, headers, body, rechargedFigure) => {
         }).then((info)=>{
             setData(info)
         }).catch((err)=>{
-            console.log(err);
+            //console.log(err);
         })
     }, [rechargedFigure]);
     return [data];

@@ -9,8 +9,7 @@ import {Link} from 'react-router-dom';
 
 function ProductCard({products}) {
     
-    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext); //TALVEZ SEA ESTO lo que se manda como parametro en result 
-    console.log("ESRTA ES LA PLATA QUE HAY ==============>", coinsFigure);
+    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext); 
     const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
     const [productPrice, setProductPrice] = useState(0);
 
