@@ -137,7 +137,7 @@ const Results = () => {
     
 
     useEffect(()=>{
-        if(filteredlistPaginated.length > 0 && filtersValues.category){
+        if(filteredlistPaginated.length > 0 && filtersValues.category !== ''){
             const filteredProducts = filteredlistPaginated.filter(product => product.category == filtersValues.category);
             setListFilteredByCategory(filteredProducts);
         }else{
@@ -147,13 +147,13 @@ const Results = () => {
 
 
     //Organizando los elemento filtrados por categoria por el filtro de precio
-    if(listFilteredByCategory && filtersValues.price === 'max' && filtersValues.price !== ''){
+    if(listFilteredByCategory && filtersValues.price === 'max'){
         listFilteredByCategory.sort(function (a, b) {
             return b.cost - a.cost;
         });
     }
 
-    if(listFilteredByCategory && filtersValues.price === 'min' && filtersValues.price !== ''){
+    if(listFilteredByCategory && filtersValues.price === 'min'){
         listFilteredByCategory.sort(function (a, b) {
             return a.cost - b.cost;
         });
