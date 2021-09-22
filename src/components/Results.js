@@ -50,7 +50,8 @@ const Results = () => {
 
     
   const count = Math.ceil(filteredList.length / PER_PAGE);
-
+  
+  console.log(filtersValues)
   //================================================================================================>☻
 
   const _DATA = usePagination(filteredList, PER_PAGE);
@@ -108,29 +109,18 @@ const Results = () => {
     const getReedemProducts = useFetch(getReedemproducts, headers, productId);
 
 
+
+
+
     //Oganizando los productos elementos del index por filtro de precio
-
-    // useEffect(()=>{
-    //     if(filteredList && filtersValues.price === 'max'){
-    //     filteredList.sort(function (a, b) {
-    //         return b.cost - a.cost;
-    //     })
-    // }
-    // if(filteredList && filtersValues.price === 'min'){
-    //     filteredList.sort(function (a, b) {
-    //         return a.cost - b.cost;
-    //     });
-    // }
-    // },[filtersValues.price])
-
-    if(filteredList && filtersValues.price === 'max'){
-        filteredList.sort(function (a, b) {
+    if(filteredlistPaginated && filtersValues.price === 'max'){
+        filteredlistPaginated.sort(function (a, b) {
             return b.cost - a.cost;
         });
     }
 
-    if(filteredList && filtersValues.price === 'min'){
-        filteredList.sort(function (a, b) {
+    if(filteredlistPaginated && filtersValues.price === 'min'){
+        filteredlistPaginated.sort(function (a, b) {
             return a.cost - b.cost;
         });
     }
@@ -140,8 +130,6 @@ const Results = () => {
             setPage(1);
             _DATA.jump(1);
         }
-
-        
 
         if(e.target.getAttribute('name') === 'next'){
             setPage(2);
