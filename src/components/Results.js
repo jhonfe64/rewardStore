@@ -50,8 +50,7 @@ const Results = () => {
 
     
   const count = Math.ceil(filteredList.length / PER_PAGE);
-  
-  console.log(filtersValues)
+
   //================================================================================================>☻
 
   const _DATA = usePagination(filteredList, PER_PAGE);
@@ -77,22 +76,6 @@ const Results = () => {
         setFilteredList(indexProducts);
     },[indexProducts]);
 
-
-    // useEffect(()=>{
-    //     const filteredProducts = indexProducts.filter((product)=>{
-    //         if(product.category !== ''){
-    //             return filtersValues.category === product.category;
-    //         }
-    //     })
-
-    //     if(filteredProducts.length > 0){
-    //         setFilteredList(filteredProducts);
-    //     }else{
-    //         setFilteredList(indexProducts);
-    //     }
-    // },[filtersValues.category, indexProducts]);
-
-
     //==========> Si existe filteredlistPaginated
 
 
@@ -107,10 +90,6 @@ const Results = () => {
  
     //Trayendo los productos cangeados
     const getReedemProducts = useFetch(getReedemproducts, headers, productId);
-
-
-
-
 
     //Oganizando los productos elementos del index por filtro de precio
     if(filteredlistPaginated && filtersValues.price === 'max'){
@@ -162,9 +141,6 @@ const Results = () => {
             return a.cost - b.cost;
         });
     }
-
-
-
 
     return (
         <ResultsComponent>
