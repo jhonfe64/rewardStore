@@ -15,7 +15,7 @@ import RedeemProductCard from './RedeemProductCard';
 import {IndexProductsContext} from '../context/indexProductsContext';
 import {FiltersContext} from '../context/filters';
 import {SuccessModalContext} from '../context/successModalCotext';
-import {CoinsContext} from '../context/actualCoinsContext';
+import {CoinsContext} from '../context/actualCoinsContext'; //TAL VEZ SEA ESTO
 //Pginacións
 import usePagination from "../hooks/usePagination";
 
@@ -30,7 +30,10 @@ const Results = () => {
     //productos cangeados
     const {productId}  = useContext(ProductIdContext);
 
-    let {coinsFigure} = useContext(CoinsContext);
+    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext);
+
+
+    const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
 
 
     //Contexto productos del index
@@ -42,7 +45,7 @@ const Results = () => {
     const [filteredList, setFilteredList] = useState([]);
 
     //Paginación
-    let [setPage] = useState(1);
+    let [page, setPage] = useState(1);
     const PER_PAGE = 16;
 
     
@@ -65,6 +68,8 @@ const Results = () => {
     let y = _DATA.prev();
   },[filteredList]);
 
+  //hay q filtrar sobre esta lista esta lista es la que tiene 16productos en una pagina y 16 en la otra
+
     //ESTE FILTRO FUNCIONA PARA FILTRAR SOBRE INDEX 
 
     useEffect(()=>{
@@ -72,6 +77,7 @@ const Results = () => {
     },[indexProducts]);
 
     //==========> Si existe filteredlistPaginated
+
 
      const body = JSON.stringify({
         "productId": productId
@@ -84,6 +90,7 @@ const Results = () => {
  
     //Trayendo los productos cangeados
     const getReedemProducts = useFetch(getReedemproducts, headers, productId);
+
 
     //Oganizando los productos elementos del index por filtro de precio
     if(filteredlistPaginated && filtersValues.price === 'max'){
