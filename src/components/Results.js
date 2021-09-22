@@ -109,13 +109,27 @@ const Results = () => {
 
 
     //Oganizando los productos elementos del index por filtro de precio
-    if(filteredList && filtersValues.price === 'max' && filtersValues.price !== ''){
+
+    // useEffect(()=>{
+    //     if(filteredList && filtersValues.price === 'max'){
+    //     filteredList.sort(function (a, b) {
+    //         return b.cost - a.cost;
+    //     })
+    // }
+    // if(filteredList && filtersValues.price === 'min'){
+    //     filteredList.sort(function (a, b) {
+    //         return a.cost - b.cost;
+    //     });
+    // }
+    // },[filtersValues.price])
+
+    if(filteredList && filtersValues.price === 'max'){
         filteredList.sort(function (a, b) {
             return b.cost - a.cost;
         });
     }
 
-    if(filteredList && filtersValues.price === 'min' && filtersValues.price !== ''){
+    if(filteredList && filtersValues.price === 'min'){
         filteredList.sort(function (a, b) {
             return a.cost - b.cost;
         });
@@ -146,14 +160,16 @@ const Results = () => {
     },[filtersValues.category]);
 
 
+    //cuamdo filtra por categoria yd espues quiere ordenarlos
     //Organizando los elemento filtrados por categoria por el filtro de precio
-    if(listFilteredByCategory && filtersValues.price === 'max'){
+    if(listFilteredByCategory && filtersValues.price === 'max' && filtersValues.category !== ''){
         listFilteredByCategory.sort(function (a, b) {
             return b.cost - a.cost;
         });
     }
 
-    if(listFilteredByCategory && filtersValues.price === 'min'){
+
+    if(listFilteredByCategory && filtersValues.price === 'min' && filtersValues.category !== ''){
         listFilteredByCategory.sort(function (a, b) {
             return a.cost - b.cost;
         });
