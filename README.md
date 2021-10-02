@@ -21,7 +21,7 @@ on vsc console type:
 
 type on vsc console => npm start
 
-## check the app deployed in vercel https://jhonfe64.github.io/rewardStore/#/
+## check the app deployed on githugpages https://jhonfe64.github.io/rewardStore/#/
 
 
 
