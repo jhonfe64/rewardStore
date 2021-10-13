@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, {useContext} from 'react';
 import ProductFiltres from '../elements/ProductFiltres';
 import { JumboHeightContext } from '../context/jumboContext';
 import {Link} from 'react-router-dom';

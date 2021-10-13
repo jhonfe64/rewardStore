@@ -30,7 +30,7 @@ const Results = () => {
     //productos cangeados
     const {productId}  = useContext(ProductIdContext);
 
-    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext);
+    let {coinsFigure} = useContext(CoinsContext);
 
 
     const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
@@ -50,8 +50,6 @@ const Results = () => {
 
     
   const count = Math.ceil(filteredList.length / PER_PAGE);
-
-  //================================================================================================>☻
 
   const _DATA = usePagination(filteredList, PER_PAGE);
 

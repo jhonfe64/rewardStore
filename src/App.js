@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import './App.css';
+import './css/App.css';
 import Header from './components/Header';
 import Jumbo from './components/Jumbo';
 import Results from './components/Results';

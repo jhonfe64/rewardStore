@@ -2,7 +2,7 @@ import React from 'react';
 // import CardProduct from '../elements/CardProduct';
 import RedeemProductCar from '../elements/RedeemProductCardStyles'
 import {Link} from 'react-router-dom';
-import '../App.css'
+import '../css/App.css'
 
 function RedeemProductCard({products}) {
     return (

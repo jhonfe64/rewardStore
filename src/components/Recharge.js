@@ -20,7 +20,6 @@ function Recharge() {
     //getting new coins 
     useFetchPost(updateCoinsFigureUrl, headers, body, newCoins);
  
-
     const getCoins = (e) => {
         setNewCoins(e.target.value);
         setTimeout(()=>{
