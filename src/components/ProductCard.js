@@ -3,7 +3,7 @@ import CardProduct from '../elements/CardProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import {CoinsContext} from '../context/actualCoinsContext'; //TAL VEZ SEA ESTO
-import {ProductIdContext} from '../context/productid'
+import {ProductIdContext} from '../context/productIdContext'
 import {SuccessModalContext} from '../context/successModalCotext';
 import {Link} from 'react-router-dom';
 

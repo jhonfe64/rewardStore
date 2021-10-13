@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './App';
 import 'bootstrap-4-grid/css/grid.min.css';
 import {SuccessModalContextProvider}  from './context/successModalCotext';
-import {ProductIdContextProvider} from './context/productid';
+import {ProductIdContextProvider} from './context/productIdContext';
 import {IndexProductsContextProvider} from './context/indexProductsContext';
-import {FiltersContextProvider} from './context/filters';
+import {FiltersContextProvider} from './context/filtersContext';
 
 ReactDOM.render(
   <React.StrictMode>

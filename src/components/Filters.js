@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import ProductFiltres from '../elements/ProductFiltres';
 import { JumboHeightContext } from '../context/jumboContext';
 import {Link} from 'react-router-dom';
-import {FiltersContext} from '../context/filters';
+import {FiltersContext} from '../context/filtersContext';
 
 
 function Filters() {

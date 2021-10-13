@@ -6,14 +6,14 @@ import Loader from './Loader';
 //Import personalized hook
 
 import useFetch from '../hooks/useFetch';
-import {ProductIdContext} from '../context/productid';
+import {ProductIdContext} from '../context/productIdContext';
 import  useFetchPost from '../hooks/useFetchPost';
 import {setReedemproducts} from '../keys';
 import {getReedemproducts} from '../keys';
 import { useLocation } from 'react-router';
 import RedeemProductCard from './RedeemProductCard';
 import {IndexProductsContext} from '../context/indexProductsContext';
-import {FiltersContext} from '../context/filters';
+import {FiltersContext} from '../context/filtersContext';
 import {SuccessModalContext} from '../context/successModalCotext';
 import {CoinsContext} from '../context/actualCoinsContext'; //TAL VEZ SEA ESTO
 //Pginacións
@@ -30,7 +30,7 @@ const Results = () => {
     //productos cangeados
     const {productId}  = useContext(ProductIdContext);
 
-    let {coinsFigure} = useContext(CoinsContext);
+    let {coinsFigure, updateCoinsFigure} = useContext(CoinsContext);
 
 
     const {successModalStatus, updateSuccessmodal} = useContext(SuccessModalContext);
@@ -50,6 +50,8 @@ const Results = () => {
 
     
   const count = Math.ceil(filteredList.length / PER_PAGE);
+
+  //================================================================================================>☻
 
   const _DATA = usePagination(filteredList, PER_PAGE);
 

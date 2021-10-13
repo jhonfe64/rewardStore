@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
-import {FiltersContext} from '../context/filters';
+import React, { useState} from "react";
 
 function usePagination(data, itemsPerPage, item) {
 
